@@ -13,23 +13,17 @@ int[] CreateRandomArray(int size, int min, int max)
     return array;
 }
 
-void Result(int[] massive, int count1, int count2)
+void Result(int[] massive, int count)
 {
     for (int i = 0; i < massive.Length; i++)
     {
         if (massive[i] % 2 == 0)
         {
-            count2 += 1;
-        }
-
-        else
-        {
-            count1 += 1;
+            count += 1;
         }
     }
-    Console.WriteLine($"Количество нечетных чисел в массиве равно {count1}");
-    Console.WriteLine($"Количество четных чисел в массиве равно {count2}");
+    Console.WriteLine($"Количество четных чисел в массиве равно {count}");
 }
 
 int[] myArray = CreateRandomArray(10, 100, 999);
-Result(myArray, 0, 0);
+Result(myArray, 0);
