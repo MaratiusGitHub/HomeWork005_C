@@ -18,19 +18,19 @@ void result(int[] collection)
     int min = collection[0];
     for (int i = 0; i < collection.Length; i++)
     {
-        if (max > collection[i])
+        if (max < collection[i])
         {
             max = collection[i];
         }
-        else if (min < collection[i])
+        else if (min > collection[i])
         {
             min = collection[i];
         }
     }
     Console.WriteLine("Максимальное число равно " + max);
     Console.WriteLine("Минимальное число равно " + min);
-    Console.WriteLine($"Hазница между максимальным и минимальным элементов массива  равна {Math.Abs = max - min}");
+    Console.WriteLine($"Hазница между максимальным и минимальным элементов массива  равна {max - min}");
 }
 
-int[] array = CreateRandomArray(10, -10, 10);
+int[] array = CreateRandomArray(10, -50, 50);
 result(array);
